@@ -1,6 +1,8 @@
 import streamlit as st
 import domande
 import pandas as pd
+import json
+
 #aggiungerenumerodomandetotali
 numerodomande_totali=2
 ## INIZIALIZZARE LE DOMANDE E I DATI INIZIALI
@@ -16,6 +18,9 @@ else:
     st.session_state.mail = st.session_state.mail
     st.session_state.prima = st.session_state.prima
     st.session_state.seconda = st.session_state.seconda
+a = {"type": ["type"]}
+with open('codice_per_st_secrets.json', 'w') as fp:
+    json.dump(a, fp)
 
 #def salva_risultati():
     #st.write(st.session_state)
